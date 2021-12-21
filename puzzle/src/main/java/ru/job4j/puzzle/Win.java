@@ -26,6 +26,7 @@ public class Win {
         for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 1 && (checkHorizontalLine(board, i) || checkVerticalLine(board, i))) {
                 rsl = true;
+                break;
             }
         }
         return rsl;
