@@ -2,23 +2,25 @@ package ru.job4j.puzzle;
 
 public class Win {
     private static boolean checkHorizLine(int[][] board, int horizLine) {
-        int count = 0;
+        boolean result = true;
         for (int i = 0; i < board.length; i++) {
-            if (board[horizLine][i] == 1) {
-                count++;
+            if (board[horizLine][i] != 1) {
+                result = false;
+                break;
             }
         }
-        return count == board.length;
+        return result;
     }
 
     private static boolean checkVertLine(int[][] board, int vertLine) {
-        int count = 0;
+        boolean result = true;
         for (int i = 0; i < board.length; i++) {
-            if (board[i][vertLine] == 1) {
-                count++;
+            if (board[i][vertLine] != 1) {
+                result = false;
+                break;
             }
         }
-        return count == board.length;
+        return result;
     }
 
     public static boolean check(int[][] board) {
