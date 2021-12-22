@@ -1,7 +1,7 @@
 package ru.job4j.puzzle;
 
 public class Win {
-    private static boolean checkHorizLine(int[][] board, int horizLine) {
+    private static boolean checkHorizontalLine(int[][] board, int horizLine) {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
             if (board[horizLine][i] != 1) {
@@ -12,7 +12,7 @@ public class Win {
         return result;
     }
 
-    private static boolean checkVertLine(int[][] board, int vertLine) {
+    private static boolean checkVerticalLine(int[][] board, int vertLine) {
         boolean result = true;
         for (int i = 0; i < board.length; i++) {
             if (board[i][vertLine] != 1) {
@@ -26,10 +26,7 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 1
-                    &&
-                    (checkHorizLine(board, i) || checkVertLine(board, i))
-            ) {
+            if (board[i][i] == 1 && (checkHorizontalLine(board, i) || checkVerticalLine(board, i))) {
                 rsl = true;
                 break;
             }
