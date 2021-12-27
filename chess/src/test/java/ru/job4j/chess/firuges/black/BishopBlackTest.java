@@ -29,29 +29,27 @@ public class BishopBlackTest {
     public void way() {
         Cell startPosition = Cell.C1;
         Cell endPosition = Cell.G5;
-        Cell[] exeptionWays = new Cell[]{ Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] exeptionWays = new Cell[]{Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         BishopBlack bishopBlack = new BishopBlack(startPosition);
         Cell[] realWay = bishopBlack.way(endPosition);
         assertThat(exeptionWays, is(realWay));
         startPosition = Cell.B1;
         endPosition = Cell.A2;
-        exeptionWays = new Cell[]{ Cell.A2};
+        exeptionWays = new Cell[]{Cell.A2};
         BishopBlack bishopBlack2 = new BishopBlack(startPosition);
         realWay = bishopBlack2.way(endPosition);
         assertThat(exeptionWays, is(realWay));
         startPosition = Cell.D4;
         endPosition = Cell.G1;
-        exeptionWays = new Cell[]{ Cell.E3, Cell.F2, Cell.G1};
+        exeptionWays = new Cell[]{Cell.E3, Cell.F2, Cell.G1};
         BishopBlack bishopBlack3 = new BishopBlack(startPosition);
         realWay = bishopBlack3.way(endPosition);
         assertThat(exeptionWays, is(realWay));
         startPosition = Cell.C3;
         endPosition = Cell.A1;
-        exeptionWays = new Cell[]{ Cell.B2, Cell.A1};
+        exeptionWays = new Cell[]{Cell.B2, Cell.A1};
         BishopBlack bishopBlack4 = new BishopBlack(startPosition);
         realWay = bishopBlack4.way(endPosition);
         assertThat(exeptionWays, is(realWay));
     }
-
-
 }
